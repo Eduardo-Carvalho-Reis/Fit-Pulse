@@ -1,14 +1,14 @@
 <?php
 require_once 'inc/dados.php';
-$titulo = 'Contato e Pedidos'; $pagina = 'contato'; $js = 'contato.js';
+$titulo = 'Finalizar pedido'; $pagina = 'contato'; $js = 'contato.js';
 $catalogo = [];
 foreach ($produtos as $id => $p) { $catalogo[$id] = ['nome' => $p['nome'], 'preco' => $p['preco']]; }
 include 'inc/cabecalho.php';
 ?>
 <main>
     <section class="texto-produtos">
-        <h1>Faça seu pedido ou peça um orçamento</h1>
-        <p>Os produtos adicionados na loja aparecem abaixo.</p>
+        <h1>Finalizar pedido</h1>
+        <p>Confira os itens do carrinho e preencha seus dados para enviar o pedido.</p>
     </section>
 
     <form class="form" action="processa.php" method="post">
@@ -45,7 +45,7 @@ include 'inc/cabecalho.php';
             <textarea id="mensagem" name="mensagem" rows="4"></textarea>
         </fieldset>
 
-        <button type="submit" class="btn">Enviar solicitação</button>
+        <button type="submit" class="btn">Finalizar pedido</button>
     </form>
 </main>
 <script>const CATALOGO = <?= json_encode($catalogo, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?>;</script>

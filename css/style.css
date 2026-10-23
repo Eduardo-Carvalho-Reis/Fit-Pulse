@@ -101,6 +101,16 @@ input[type=text], input[type=email], input[type=tel], input[type=number], textar
 .linha { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; }
 .linha input { width: 80px; margin: 0; }
 .total { font-weight: bold; text-align: right; }
+.carrinho-painel { max-width: 900px; margin: 0 auto 30px; padding: 20px; background: #fff; border-radius: 8px; }
+.item-carrinho { display: grid; grid-template-columns: 90px minmax(140px, 1fr) 130px 150px; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid #ddd; }
+.item-carrinho img { width: 90px; height: 80px; object-fit: contain; background: #f4f4f4; border-radius: 6px; }
+.item-carrinho h2 { font-size: 1rem; margin: 0 0 6px; }
+.item-carrinho-info p { margin: 0; color: #555; }
+.quantidade-carrinho { margin: 0; }
+.quantidade-carrinho input { width: 90px; }
+.subtotal-carrinho { display: flex; flex-direction: column; gap: 4px; text-align: right; margin: 0; }
+.acoes-carrinho { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.desabilitado { opacity: .5; cursor: not-allowed; pointer-events: none; }
 table { width: 100%; border-collapse: collapse; margin: 14px 0; }
 th, td { padding: 6px; border-bottom: 1px solid #ddd; text-align: left; }
 .valor { text-align: right; }
@@ -119,4 +129,10 @@ th, td { padding: 6px; border-bottom: 1px solid #ddd; text-align: left; }
     .banners img:nth-child(2) { display: none; }
     .slider-carrosel { padding: 16px 8px; }
     .detalhe { grid-template-columns: 1fr; padding: 16px; }
+    .item-carrinho { grid-template-columns: 72px 1fr; gap: 10px; }
+    .item-carrinho img { width: 72px; height: 68px; }
+    .quantidade-carrinho, .subtotal-carrinho { grid-column: 2; }
+    .subtotal-carrinho { flex-direction: row; justify-content: space-between; text-align: left; }
+    .acoes-carrinho { justify-content: stretch; }
+    .acoes-carrinho .btn { text-align: center; flex: 1 1 100%; }
 }
