@@ -32,6 +32,7 @@ document.addEventListener('click', (e) => {
     const botao = e.target.closest('[data-add]');
     if (!botao) return;
     Carrinho.adicionar(botao.dataset.add);
-    botao.textContent = 'Adicionado';
-    setTimeout(() => { botao.textContent = 'Comprar'; }, 1200);
+    const textoOriginal = botao.textContent;
+    botao.textContent = 'Adicionado ao pedido';
+    setTimeout(() => { botao.textContent = textoOriginal; }, 1200);
 });

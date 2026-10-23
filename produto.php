@@ -31,12 +31,7 @@ $titulo = $p['nome']; $pagina = 'produtos'; $js = '';
 include 'inc/cabecalho.php';
 ?>
 <main>
-    <nav class="migalhas" aria-label="Você está em">
-        <a href="index.php">Início</a> &rsaquo;
-        <a href="produtos.php">Produtos</a> &rsaquo;
-        <span><?= h($p['nome']) ?></span>
-    </nav>
-
+   
     <section class="detalhe">
         <div class="detalhe-img">
             <img src="img/produtos/<?= h($p['img']) ?>" alt="<?= h($p['nome']) ?>">
@@ -51,10 +46,10 @@ include 'inc/cabecalho.php';
             <p class="desconto"><?= $desconto ?>% de desconto</p>
 
             <div class="acoes">
-                <button class="btn" data-add="<?= h($id) ?>">Comprar</button>
-                <a href="contato.php" class="btn btn-claro">Ir para o pedido</a>
+                <button class="btn" data-add="<?= h($id) ?>">Adicionar ao carrinho </button>
+                
             </div>
-            <p><a href="produtos.php">Voltar aos produtos</a></p>
+            <p><a href="produtos.php" class="btn btn-claro">Voltar aos produtos</a></p>
         </div>
     </section>
 

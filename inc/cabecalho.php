@@ -19,7 +19,7 @@ $links = ['index' => 'Início', 'produtos' => 'Produtos'];
             <?php foreach ($links as $arq => $rotulo): ?>
                 <a href="<?= $arq ?>.php"<?= $arq === $pagina ? ' class="ativo"' : '' ?>><?= $rotulo ?></a>
             <?php endforeach; ?>
-            <a href="contato.php" class="carrinho" title="Itens no pedido">Pedido <span id="cart-count">0</span></a>
+            <a href="carrinho.php" class="carrinho" title="Ver carrinho">Carrinho <span id="cart-count">0</span></a>
         </nav>
     </div>
 </header>
